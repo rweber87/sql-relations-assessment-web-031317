@@ -18,6 +18,8 @@ Here, we have a different Yelp-style application. We need customers, restaurants
    + What we are concerned about is which tables have foreign keys
    + Don't stress: There may be multiple correct answers based on your conception of the problem.
 
+   
+
    Eg. for our books and authors your deliverable would look like
 
     ### books
@@ -73,3 +75,22 @@ end
 
 
 #### Write your domain model here:
+
+  Customers - has_many reviews 
+
+  | id | name |
+   
+
+  Restaurants - belongs_to owners
+
+  | id | name | owner_id |
+
+
+  Owners - has_many restaurants 
+
+  | id | name |
+
+
+  Reviews - belongs_to customers and belongs_to restaurants 
+
+  | id | cust_id | rest_id | content |
